@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #172033;
+}
+
+/* Navigation */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px #ddd;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.logo span,
+.heading span,
+.hero-text span {
+    color: #087e8b;
+}
+
+nav a {
+    text-decoration: none;
+    color: #172033;
+    margin-left: 22px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #087e8b;
+}
+
+.menu-btn {
+    display: none;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Home */
+
+.hero {
+    min-height: 580px;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    background: #eaf3f5;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #087e8b;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.hero-text>p {
+    line-height: 1.8;
+    color: #596579;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 380px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+    box-shadow: 0 10px 25px #ccc;
+    background: white;
+}
+
+.buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 22px;
+    background: #087e8b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #075d67;
+    transform: translateY(-3px);
+}
+
+.outline {
+    background: transparent;
+    border: 2px solid #087e8b;
+    color: #087e8b;
+}
+
+
+/* Common Sections */
+
+section {
+    padding: 75px 10%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.light-section {
+    background: #edf5f6;
+}
+
+
+/* About */
+
+.about-content {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+    color: #596579;
+}
+
+
+/* Skills */
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.skill {
+    background: white;
+    padding: 16px 25px;
+    border-radius: 7px;
+    border: 1px solid #d8e3e5;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    background: #087e8b;
+    color: white;
+    transform: translateY(-5px);
+}
+
+
+/* Projects */
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 28px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px #ddd;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+}
+
+.project-card h3 {
+    color: #087e8b;
+    margin-bottom: 18px;
+}
+
+.project-card p {
+    color: #596579;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.project-card h4 {
+    margin-top: 15px;
+}
+
+
+/* Experience */
+
+.experience-card {
+    max-width: 750px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-left: 5px solid #087e8b;
+    line-height: 2;
+    box-shadow: 0 5px 20px #ddd;
+}
+
+.experience-card h3 {
+    color: #087e8b;
+}
+
+
+/* Education */
+
+.education-card {
+    text-align: center;
+    line-height: 2;
+}
+
+
+/* Contact */
+
+.contact-content {
+    text-align: center;
+    line-height: 2.5;
+}
+
+.contact-content a {
+    color: #087e8b;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background: #172033;
+    color: white;
+    padding: 25px;
+}
+
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 18px 6%;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: white;
+        padding: 25px;
+    }
+
+    nav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        width: 210px;
+        height: 210px;
+    }
+
+    section {
+        padding: 55px 7%;
+    }
+
+}
